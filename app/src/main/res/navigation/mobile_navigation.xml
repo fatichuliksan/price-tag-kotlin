@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.ftq.pricetag.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <!--    retailer-->
+    <fragment
+        android:id="@+id/retailerFragment"
+        android:name="com.ftq.pricetag.ui.retailer.RetailerFragment"
+        android:label="@string/menu_retailers"
+        tools:layout="@layout/fragment_retailer">
+        <action
+            android:id="@+id/action_retailersFragment_to_addRetailerFragment"
+            app:destination="@id/addRetailerFragment" />
+
+        <action
+            android:id="@+id/action_retailersFragment_to_updateRetailerFragment"
+            app:destination="@id/updateRetailerFragment">
+            <argument
+                android:name="retailerId"
+                app:argType="long" />
+            <argument
+                android:name="retailerName"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_retailersFragment_to_deleteRetailerFragment"
+            app:destination="@id/deleteRetailerFragment">
+            <argument
+                android:name="retailerId"
+                app:argType="long" />
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/addRetailerFragment"
+        android:name="com.ftq.pricetag.ui.retailer.AddRetailerFragment"
+        android:label="Add Retailer"
+        tools:layout="@layout/fragment_retailer_add">
+        <action
+            android:id="@+id/action_addRetailerFragment_to_retailersFragment"
+            app:destination="@id/retailerFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/updateRetailerFragment"
+        android:name="com.ftq.pricetag.ui.retailer.UpdateRetailerFragment"
+        android:label="Update Retailer"
+        tools:layout="@layout/fragment_retailer_update">
+        <argument
+            android:name="retailerId"
+            app:argType="long" />
+        <argument
+            android:name="retailerName"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_updateRetailerFragment_to_retailersFragment"
+            app:destination="@id/retailerFragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/deleteRetailerFragment"
+        android:name="com.ftq.pricetag.ui.retailer.DeleteRetailerFragment"
+        android:label="Delete Retailer"
+        tools:layout="@layout/fragment_retailer_delete">
+        <argument
+            android:name="retailerId"
+            app:argType="long" />
+
+        <action
+            android:id="@+id/action_deleteRetailerFragment_to_retailersFragment"
+            app:destination="@id/retailerFragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/nav_branch"
+        android:name="com.ftq.pricetag.ui.branch.BranchFragment"
+        android:label="@string/menu_branch"
+        tools:layout="@layout/fragment_branch" />
+
+
+    <fragment
+        android:id="@+id/nav_product"
+        android:name="com.ftq.pricetag.ui.retailer.ProductFragment"
+        android:label="@string/menu_product"
+        tools:layout="@layout/fragment_product" />
+
+    <fragment
+        android:id="@+id/nav_history"
+        android:name="com.ftq.pricetag.ui.retailer.HistoryFragment"
+        android:label="@string/menu_history"
+        tools:layout="@layout/fragment_history" />
+</navigation>

@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Price Tag</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_retailers">Retailer</string>
+    <string name="menu_branch">Branch</string>
+    <string name="menu_product">Product</string>
+    <string name="menu_history">History</string>
+
+    <string name="menu_about">About</string>
+    <string name="menu_exit">Exit</string>
+
+    <string name="add">Add</string>
+    <string name="update">Update</string>
+    <string name="delete">Delete</string>
+
+    <string name="retailer_name">Retailer Name</string>
+
+
+</resources>
