@@ -4,11 +4,11 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
-import com.ftq.pricetag.data.entity.Retailer
+import com.ftq.pricetag.entity.RetailerEntity
 import com.ftq.pricetag.databinding.RetailerItemBinding
 
 class RetailerAdapter : RecyclerView.Adapter<RetailerAdapter.RetailerViewHolder>() {
-    private var retailers = emptyList<Retailer>()
+    private var retailers = emptyList<RetailerEntity>()
     inner class RetailerViewHolder(val binding: RetailerItemBinding) : RecyclerView.ViewHolder(binding.root) {
         init {
             binding.root.setOnClickListener {
@@ -42,7 +42,7 @@ class RetailerAdapter : RecyclerView.Adapter<RetailerAdapter.RetailerViewHolder>
         return retailers.size
     }
 
-    fun setRetailers(retailers: List<Retailer>) {
+    fun setRetailers(retailers: List<RetailerEntity>) {
         this.retailers = retailers
         notifyDataSetChanged()
     }

@@ -9,7 +9,7 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.ftq.pricetag.R
-import com.ftq.pricetag.data.entity.Retailer
+import com.ftq.pricetag.entity.RetailerEntity
 import com.ftq.pricetag.databinding.FragmentRetailerUpdateBinding
 
 class UpdateRetailerFragment : Fragment() {
@@ -30,7 +30,7 @@ class UpdateRetailerFragment : Fragment() {
         binding.buttonUpdate.setOnClickListener {
             val name = binding.editTextName.text.toString()
             if (name.isNotEmpty()) {
-                val retailer = Retailer(id = args.retailerId, name = name)
+                val retailer = RetailerEntity(id = args.retailerId, name = name)
                 retailerViewModel.updateRetailer(retailer)
                 findNavController().navigate(R.id.action_updateRetailerFragment_to_retailersFragment)
             }

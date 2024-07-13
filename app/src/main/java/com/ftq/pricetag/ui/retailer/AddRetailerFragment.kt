@@ -8,7 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.ftq.pricetag.R
-import com.ftq.pricetag.data.entity.Retailer
+import com.ftq.pricetag.entity.RetailerEntity
 import com.ftq.pricetag.databinding.FragmentRetailerAddBinding
 
 class AddRetailerFragment :Fragment() {
@@ -25,7 +25,7 @@ class AddRetailerFragment :Fragment() {
         binding.buttonAdd.setOnClickListener {
             val name = binding.editTextName.text.toString()
             if (name.isNotEmpty()) {
-                val retailer = Retailer(id= 0, name = name)
+                val retailer = RetailerEntity(id= 0, name = name)
                 retailerViewModel.addRetailer(retailer)
                 findNavController().navigate(R.id.action_addRetailerFragment_to_retailersFragment)
             }

@@ -4,17 +4,12 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.ftq.pricetag.R
-import com.ftq.pricetag.data.AppDatabase
-import com.ftq.pricetag.databinding.FragmentProductBinding
 import com.ftq.pricetag.databinding.FragmentRetailerBinding
-import com.ftq.pricetag.repository.RetailerRepository
 
 class RetailerFragment : Fragment() {
     private var _binding: FragmentRetailerBinding? = null

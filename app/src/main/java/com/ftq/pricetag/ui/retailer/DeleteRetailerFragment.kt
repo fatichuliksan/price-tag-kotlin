@@ -9,7 +9,7 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.ftq.pricetag.R
-import com.ftq.pricetag.data.entity.Retailer
+import com.ftq.pricetag.entity.RetailerEntity
 import com.ftq.pricetag.databinding.FragmentRetailerDeleteBinding
 
 class DeleteRetailerFragment : Fragment() {
@@ -26,7 +26,7 @@ class DeleteRetailerFragment : Fragment() {
         _binding = FragmentRetailerDeleteBinding.inflate(inflater, container, false)
 
         binding.buttonDelete.setOnClickListener {
-            val retailer = Retailer(id = args.retailerId, name = "")
+            val retailer = RetailerEntity(id = args.retailerId, name = "")
             retailerViewModel.deleteRetailer(retailer)
             findNavController().navigate(R.id.action_deleteRetailerFragment_to_retailersFragment)
         }

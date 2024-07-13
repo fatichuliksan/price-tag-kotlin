@@ -19,6 +19,7 @@
     <string name="add">Add</string>
     <string name="update">Update</string>
     <string name="delete">Delete</string>
+    <string name="edit">Edit</string>
 
     <string name="retailer_name">Retailer Name</string>
 

@@ -1,11 +1,11 @@
-package com.ftq.pricetag.data.entity
+package com.ftq.pricetag.entity
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
-@Entity(tableName = "products")
-data class Product(
+@Entity(tableName = "branches")
+data class BranchEntity(
     @PrimaryKey(autoGenerate = true) val id: Int,
-    val sku_code: String,
+    val retailerId: Int,
     val name: String
 )

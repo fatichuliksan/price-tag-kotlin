@@ -1,11 +1,11 @@
-package com.ftq.pricetag.data.entity
+package com.ftq.pricetag.entity
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
 @Entity(tableName = "retailers")
-data class Retailer(
+data class RetailerEntity(
     @PrimaryKey(autoGenerate = true)
-    val id: Long,
+    val id: Int,
     val name: String
 )

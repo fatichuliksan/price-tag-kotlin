@@ -1,10 +1,10 @@
-package com.ftq.pricetag.data.entity
+package com.ftq.pricetag.entity
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
 @Entity(tableName = "transactions")
-data class Transaction(
+data class TransactionEntity(
     @PrimaryKey(autoGenerate = true) val id: Int,
     val date: String,
     val retailer_id: Int,

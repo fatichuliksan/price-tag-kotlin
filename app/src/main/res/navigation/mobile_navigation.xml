@@ -26,7 +26,7 @@
             app:destination="@id/updateRetailerFragment">
             <argument
                 android:name="retailerId"
-                app:argType="long" />
+                app:argType="integer" />
             <argument
                 android:name="retailerName"
                 app:argType="string" />
@@ -36,7 +36,7 @@
             app:destination="@id/deleteRetailerFragment">
             <argument
                 android:name="retailerId"
-                app:argType="long" />
+                app:argType="integer" />
         </action>
     </fragment>
 
@@ -57,7 +57,7 @@
         tools:layout="@layout/fragment_retailer_update">
         <argument
             android:name="retailerId"
-            app:argType="long" />
+            app:argType="integer" />
         <argument
             android:name="retailerName"
             app:argType="string" />
@@ -74,7 +74,7 @@
         tools:layout="@layout/fragment_retailer_delete">
         <argument
             android:name="retailerId"
-            app:argType="long" />
+            app:argType="integer" />
 
         <action
             android:id="@+id/action_deleteRetailerFragment_to_retailersFragment"
